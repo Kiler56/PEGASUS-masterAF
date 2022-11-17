@@ -1,0 +1,15 @@
+<div class="modal block--dark crear__clase" id="createclassform">
+  <div class="close" onclick="return closewindow('createclassform')">
+    <svg class="icon icon--small icon--white icon--close click">
+      <use xlink:href="Images/sprite.svg#cross"></use>
+    </svg>
+  </div>
+  <form action="">
+    <h2 class="form__title">Crear Clase</h2>
+    <p class="input__type">Nombre de la Clase</p>
+    <input type="text" maxlength="15" required id="nombre__clase" />
+    <p class="input__type">Código de la Clase</p>
+    <input type="text" minlength="5 " maxlength="5" id="codigo__clase" />
+    <input type="submit" class="btn btn--primary" onclick="return newclass()" />
+  </form>
+</div>

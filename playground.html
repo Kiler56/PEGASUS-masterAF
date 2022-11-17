@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar App Vanilla JS</title>
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <link rel="stylesheet" href="CSS/styles.css" />
+  </head>
+  <body>
+    <section class="calendar__section">
+      <body>
+        <div id="calendar__container">
+          <div id="calendar__header">
+            <div id="monthDisplay"></div>
+            <div>
+              <button class="btn btn--primary calendar__btn" id="backButton">Back</button>
+              <button class="btn btn--primary calendar__btn" id="nextButton">Next</button>
+            </div>
+          </div>
+          <div id="weekdays">
+            <div>Domingo</div>
+            <div>Lunes</div>
+            <div>Martes</div>
+            <div>Miércoles</div>
+            <div>Jueves</div>
+            <div>Viernes</div>
+            <div>Sábado</div>
+          </div>
+          <div id="calendar"></div>
+        </div>
+        <div class="modal block--dark crear__evento" id="newEventModal">
+          <h2>New Event</h2>
+          <form action="">
+            <p class="input__type">Titulo del Evento</p>
+            <input id="eventTitleInput" placeholder="Event Title" />
+            <p class="input__type">Descripción del Evento</p>
+            <input id="eventDescInput" placeholder="Event description" />
+            <div>
+              <button class="calendar__btn" id="saveButton">Save</button>
+              <button class="calendar__btn" id="cancelButton">Cancel</button>
+            </div>
+          </form>
+        </div>
+        <div class= "modal class--primary-2" id="deleteEventModal">
+          <div class="class__content">
+            <div class="class__header">
+              <h3 class="class__title">TITULO</h3>
+              <div
+                class="click"
+                id="closeButton"
+              >
+                <svg class="icon icon--small icon--white icon--close">
+                  <use xlink:href="Images/sprite.svg#cross"></use>
+                </svg>
+              </div>
+            </div>
+            <p class="desc" id="eventText">primera entrega</p>
+            <div>
+              <h3 class="class__title">DESCRIPCIÓN</h3>
+              <p id="eventDesc" class="desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                vitae nesciunt culpa obcaecati reprehenderit, vel quae accusamus
+                eaque vero sed.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="overlay"></div>
+    </section>
+    <script src="JS/estudiante.js"></script>
+  </body>
+</html>

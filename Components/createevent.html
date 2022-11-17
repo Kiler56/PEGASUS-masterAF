@@ -1,0 +1,29 @@
+<div class="modal block--dark crear__evento" id="adddesc6RT85">
+  <div class="close" onclick="return closewindow('adddesc6RT85')">
+    <svg class="icon icon--small icon--white icon--close click">
+      <use xlink:href="Images/sprite.svg#cross"></use>
+    </svg>
+  </div>
+  <form action="">
+    <h2 class="form__title">Crear Evento</h2>
+    <p class="input__type">Titulo del Evento</p>
+    <input type="text" maxlength="15" required id="nombre__evento6RT85" />
+    <p class="input__type">Descripción del Evento</p>
+    <textarea
+      id="desc__asign6RT85"
+      cols="30"
+      rows="5"
+      maxlength="100"
+      required
+    ></textarea>
+    <p class="input__type">Fecha del Evento</p>
+    <input type="date" id="fecha__evento6RT85" required />
+    <div>
+      <input
+        type="submit"
+        class="btn btn--primary"
+        onclick="return newevent('desc6RT85')"
+      />
+    </div>
+  </form>
+</div>

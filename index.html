@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <title>PEGASUS</title>
+  </head>
+  <body>
+    <button class="btn btn--outline" id="registerbtn">Register</button>
+    <button class="btn btn--primary" id="loginbtn">Login</button>
+    <div class="modal register-container hidden" id="registerform">
+      <h2 class="log__user click profesor">Registro</h2>
+      <form action="">
+        <ul class="list">
+          <li class="list-item">
+            <p class="log__inst">Correo</p>
+            <input
+              type="text"
+              placeholder="*****@eafit.edu.co"
+              id="emailReg"
+              required
+            />
+          </li>
+          <li class="list-item">
+            <p class="log__inst">Contraseña</p>
+            <input
+              type="password"
+              placeholder="Ingrese su contraseña"
+              id="passwordReg"
+              required
+            />
+          </li>
+          <li class="list-item">
+            <p class="log__inst">Confirmar contraseña</p>
+            <input
+              type="password"
+              placeholder="Ingrese su contraseña"
+              id="passwordConfirm"
+              required
+            />
+          </li>
+          <li class="list-item">
+            <p class="log__inst">Tipo de Usuario</p>
+            <input
+              type="radio"
+              id="userE"
+              value="Estudiante"
+              name="tipoUsuario"
+              checked
+            />
+            <label for="userE">Estudiante</label>
+            <input
+              type="radio"
+              id="userP"
+              value="Profesor"
+              name="tipoUsuario"
+            />
+            <label for="userP">Profesor</label>
+          </li>
+        </ul>
+        <a class="btn btn--primary btn--stretched" onclick="return register()"
+          >register</a
+        >
+      </form>
+    </div>
+    <div class="modal login-container hidden" id="logprofesor">
+      <div class="nav">
+        <h2 class="log__user click profesor">Profesor</h2>
+        <h2 class="log__user user-inactive click" id="estudiante">
+          Estudiante
+        </h2>
+      </div>
+      <form action="">
+        <ul class="list">
+          <li class="list-item">
+            <p class="log__inst">Correo Institucional</p>
+            <input
+              type="text"
+              placeholder="*****@eafit.edu.co"
+              id="email"
+              required
+            />
+          </li>
+          <li class="list-item">
+            <p class="log__inst">Contraseña</p>
+            <input
+              type="password"
+              placeholder="Ingrese su contraseña"
+              id="password"
+              required
+            />
+          </li>
+        </ul>
+        <a
+          href="#"
+          class="btn btn--primary btn--stretched"
+          onclick="return login()"
+          >Login</a
+        >
+      </form>
+    </div>
+    <div class="modal login-container" id="logestudiante">
+      <div class="nav">
+        <h2 class="log__user user-inactive click" id="profesor">Profesor</h2>
+        <h2 class="log__user click estudiante">Estudiante</h2>
+      </div>
+      <form action="">
+        <ul class="list">
+          <li class="list-item">
+            <p class="log__inst">Correo Institucional</p>
+            <input
+              type="text"
+              placeholder="*****@eafit.edu.co"
+              id="email2"
+              required
+            />
+          </li>
+          <li class="list-item">
+            <p class="log__inst">Contraseña</p>
+            <input
+              type="password"
+              placeholder="Ingrese su contraseña"
+              id="password2"
+              required
+            />
+          </li>
+        </ul>
+        <a
+          href="#"
+          class="btn btn--primary btn--stretched"
+          onclick="return login2()"
+          >Login</a
+        >
+      </form>
+    </div>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="module" src="JS/main.js"></script>
+  </body>
+</html>
